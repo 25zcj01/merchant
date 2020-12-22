@@ -2,14 +2,14 @@
 
   ##### In no particular order
   
-  - [] Add quit and exit commands
+  - [ ] Add quit and exit commands
   
   - [x] Add version without map colours
 
-  - [] Add more loading dots
+  - [ ] Add more loading dots
   
-  - [] Options at start (color scheme, difficulty, etc.)
+  - [ ] Options at start (color scheme, difficulty, etc.)
   
-  - [] License
+  - [ ] License
   
   
