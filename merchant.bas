@@ -258,7 +258,7 @@
  3150  NEXT I
  3160  CLS
  3170  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                     Programmed in TeleBASIC by Keks                  "
- 3175  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                  Minor     Improvements     by     ZCJ              "
+ 3175  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                     Minor   Improvements   by   ZCJ                  "
  3180  PRINT CHR$(27) + "[38;5;142m"
  3190  PRINT ""
  3200  PRINT ""
