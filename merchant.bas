@@ -190,7 +190,7 @@
  1900  CITYDESC$(15) = ", a small city famous for its winery."
  1910  CITYDESC$(16) = ", a large, wealthy seaside city."
  1920  CLS
- 1930  PRINT CHR$(27) + "[48;5;232m" + "Loading...";
+ 1930  PRINT CHR$(27) + "[48;5;232m" + "Loading... [" + STRING$(48,".") + "]"; : LOCATE 1, 13
  1940  KEK$ = CHR$(27) + "[48;5;088m" + " " + CHR$(27) + "[48;5;232m"
  1950  DIM MMAP$(48)
  1960  DIM MAP$(48)
@@ -255,10 +255,11 @@
  3120  IF X$ = "D" THEN MMAP$(I) = MMAP$(I) + CHR$(27) + "[38;5;142m" + X$
  3130  IF X$ = "," THEN MMAP$(I) = MMAP$(I) + CHR$(27) + "[38;5;222m" + "."
  3140  NEXT J
+ 3145  PRINT "#";
  3150  NEXT I
  3160  CLS
  3170  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                     Programmed in TeleBASIC by Keks                  "
- 3175  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                     Minor   Improvements   by   ZCJ                  "
+ 3175  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                     Improvements   made    by   ZCJ"
  3180  PRINT CHR$(27) + "[38;5;142m"
  3190  PRINT ""
  3200  PRINT ""
@@ -277,8 +278,8 @@
  3330  PRINT TAB$(3) + "                                                                          "
  3340  PRINT TAB$(3) + "                                                                          "
  3350  PRINT TAB$(3) + "                                                                          "
- 3360  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                              Press Enter                           "
- 3370  INPUT " ", DUMPP$
+ 3360  PRINT CHR$(27) + "[38;5;28m" + TAB$(3) + "                              Press Any Key                          "
+ 3370  KEY$ = INKEY$
  3380  PRINT CHR$(27) + "[38;5;214m"
  3390  PRINT "  After over 400 years of peace, the Voteron Kingdom was attacked by a dragon.  "
  3400  PRINT "The dreadful beast destroyed a few cities and flee to mountains in northeastern"
@@ -295,8 +296,8 @@
  3510  IF NAME$ = "" THEN NAME$ = USER$
  3520  IF LEN(NAME$) > 10 THEN NAME$ = LEFT$(NAME$, 10)
  3530  PRINT "Are you a " + CHR$(27) + "[38;5;051m[h]" + CHR$(27) + "[38;5;252muman, a " + CHR$(27) + "[38;5;051m[d]";
- 3540  PRINT CHR$(27) + "[38;5;252mwarf, an " + CHR$(27) + "[38;5;051m[o]" + CHR$(27) + "[38;5;252mrc or an " + CHR$(27) + "[38;5;051m[e]" + CHR$(27) + "[38;5;252mlf?"
- 3550  INPUT "", RACE$
+ 3540  PRINT CHR$(27) + "[38;5;252mwarf, an " + CHR$(27) + "[38;5;051m[o]" + CHR$(27) + "[38;5;252mrc or an " + CHR$(27) + "[38;5;051m[e]" + CHR$(27) + "[38;5;252mlf?" ;
+ 3550  RACE$ = INKEY$
  3560  IF RACE$ = "" THEN RACE$ = " "
  3570  RACE$ = LEFT$(RACE$,1)
  3580  RACE$ = UPS$(RACE$)
